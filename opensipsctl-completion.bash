@@ -14,7 +14,7 @@ _opensipsctl_completions()
         COMPREPLY=($(compgen -W "show reload dump addgw rmgw" -- $cur) )
         ;;
       "fifo")
-	      COMPREPLY=($(compgen -W "$(opensipsctl fifo which)" -- $cur) )
+	COMPREPLY=($(compgen -W "$(opensipsctl fifo which)" -- $cur) )
         ;;
       *)
         ;;

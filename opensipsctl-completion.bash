@@ -1,5 +1,8 @@
 #/usr/bin/env bash
 
+# Copyright (C) 2019 Anton Mosin <anton@mosin.org>
+# Distributed under the GNU General Public License, version 2.0.
+
 _opensipsctl_completions()
 {
   COMPREPLY=()

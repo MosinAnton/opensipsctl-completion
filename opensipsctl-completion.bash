@@ -10,7 +10,7 @@ _opensipsctl_completions()
   prev=${COMP_WORDS[COMP_CWORD-1]}
 
   if [ $COMP_CWORD -eq 1 ]; then
-    COMPREPLY=( $(compgen -W "dispatcher fifo monitor ps" -- $cur) )
+    COMPREPLY=( $(compgen -W "dispatcher fifo monitor ps ul" -- $cur) )
   elif [ $COMP_CWORD -eq 2 ]; then
     case "$prev" in
       "dispatcher")
@@ -19,6 +19,9 @@ _opensipsctl_completions()
       "fifo")
 	COMPREPLY=($(compgen -W "$(opensipsctl fifo which)" -- $cur) )
         ;;
+      "ul")
+        COMPREPLY=($(compgen -W "show add rm" -- $cur) )
+	;;
       *)
         ;;
     esac
